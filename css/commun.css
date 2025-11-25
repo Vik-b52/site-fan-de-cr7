@@ -1,0 +1,44 @@
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+    height: 20vh;
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
+}
+
+.section-header h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: .4rem;
+}
+
+
+.section-header h2::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 40%;
+    background: linear-gradient(to right, var(--couleur-prim), transparent);
+}
+
+
+.btn-retour {
+    padding: .6rem 1.4rem;
+    border-radius: 999px;
+    border: 2px solid var(--couleur-prim);
+    background: var(--couleur-prim);
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-retour:hover {
+    background: transparent;
+    color: var(--couleur-prim);
+}
