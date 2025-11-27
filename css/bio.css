@@ -1,0 +1,78 @@
+#bio .bloc-bio {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.images-bio {
+    position: relative;
+    width: 50%;
+    height: 380px;
+}
+
+.images-bio img {
+    position: absolute;
+    width: 45%;
+    height: 45%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.images-bio img:nth-child(1) { top: 0; left: 0; }
+.images-bio img:nth-child(2) { bottom: 0; left: 15%; }
+.images-bio img:nth-child(3) { top: 20%; right: 0; }
+.images-bio img:nth-child(4) { bottom: 10%; right: 25%; }
+
+
+.images-bio img:hover {
+    transform: scale(1.08);
+    z-index: 3;
+}
+
+.texte-bio {
+    width: 45%;
+    position: relative;
+    min-height: 80px;
+}
+
+.texte-bio span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem 1.4rem;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.75);
+    opacity: 0;
+    visibility: hidden;
+    max-width: 100%;
+    transition: opacity .5s ease, visibility .5s ease;
+}
+
+.texte-bio span:nth-child(1) {
+    opacity: 1;
+    visibility: visible;
+}
+
+#bio:has(.images-bio img:hover) .texte-bio span {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#bio:has(.images-bio img:nth-child(1):hover) .texte-bio span:nth-child(2),
+#bio:has(.images-bio img:nth-child(2):hover) .texte-bio span:nth-child(3),
+#bio:has(.images-bio img:nth-child(3):hover) .texte-bio span:nth-child(4),
+#bio:has(.images-bio img:nth-child(4):hover) .texte-bio span:nth-child(5) {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media(max-width: 900px) {
+    #bio .bloc-bio {
+        flex-direction: column;
+    }
+    .images-bio,
+    .texte-bio {
+        width: 100%;
+    }
+}
