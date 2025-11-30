@@ -1,0 +1,33 @@
+.liste-clubs {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+
+.liste-clubs input {
+    display: none;
+}
+
+
+.card {
+    position: relative;
+    flex: 1;
+    min-height: 220px;
+    border-radius: var(--arrondi);
+    overflow: hidden;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--ombre);
+    transition: flex .4s ease, transform .3s ease, filter .3s ease;
+    filter: grayscale(.3);
+}
+
+
+.card.sporting  { background-image: url("../img/sporting.jpg"); }
+.card.united    { background-image: url("../img/united.jpg"); }
+.card.real      { background-image: url("../img/real.jpg"); }
+.card.juve      { background-image: url("../img/juve.jpg"); }
+.card.portugal  { background-image: url("../img/portugal.jpg"); }
+.card.alnassr   { background-image: url("../img/alnassr.jpg"); }
