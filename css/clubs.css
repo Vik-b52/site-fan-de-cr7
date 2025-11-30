@@ -31,3 +31,92 @@
 .card.juve      { background-image: url("../img/juve.jpg"); }
 .card.portugal  { background-image: url("../img/portugal.jpg"); }
 .card.alnassr   { background-image: url("../img/alnassr.jpg"); }
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    padding: 1rem 1.2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.75), transparent 60%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.overlay h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: .2rem;
+}
+
+.annee {
+    font-size: .85rem;
+    color: var(--cr7-accent);
+    font-weight: 600;
+}
+
+.stats {
+    font-size: .85rem;
+    opacity: .9;
+}
+
+
+.text {
+    font-size: .8rem;
+    margin-top: .25rem;
+    opacity: 0;
+    max-width: 90%;
+    transition: opacity .3s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-3px);
+    filter: grayscale(0);
+}
+
+#club1:checked + .card,
+#club2:checked + .card,
+#club3:checked + .card,
+#club4:checked + .card,
+#club5:checked + .card,
+#club6:checked + .card {
+    flex: 2.4;                  
+    transform: translateY(-4px);
+    filter: grayscale(0);
+}
+
+#club1:checked + .card .text,
+#club2:checked + .card .text,
+#club3:checked + .card .text,
+#club4:checked + .card .text,
+#club5:checked + .card .text,
+#club6:checked + .card .text {
+    opacity: 1;                 
+}
+
+
+.liste-clubs input:checked + .card ~ label {
+    flex: 1;
+}
+
+
+
+@media (max-width: 900px) {
+    .liste-clubs {
+        flex-direction: column;
+    }
+
+    .card {
+        min-height: 200px;
+    }
+
+    #club1:checked + .card,
+    #club2:checked + .card,
+    #club3:checked + .card,
+    #club4:checked + .card,
+    #club5:checked + .card,
+    #club6:checked + .card {
+        flex: 1.3;
+    }
+}
