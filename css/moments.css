@@ -1,0 +1,33 @@
+.moments-grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+
+.cardm {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--ombre);
+}
+
+
+#juve {
+    background-image: url("../img/juventus.jpg");
+}
+
+#espagne {
+    background-image: url("../img/espagne.jpg");
+}
+
+#atletico {
+    background-image: url("../img/atletico.jpg");
+}
+
+#euro {
+    background-image: url("../img/euro.jpg");
+}
