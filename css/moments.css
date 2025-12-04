@@ -31,3 +31,43 @@
 #euro {
     background-image: url("../img/euro.jpg");
 }
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.4rem 1.6rem;
+    color: #fff;
+}
+
+.overlay h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: .25rem;
+}
+
+.overlay p {
+    font-size: 0.95rem;
+    opacity: .9;
+}
+
+
+.cardm:hover {
+    transform: translateY(-4px);
+    transition: .3s;
+    filter: brightness(1.05);
+}
+
+
+@media (max-width: 900px) {
+    .moments-grid-2x2 {
+        grid-template-columns: 1fr;
+    }
+
+    .cardm {
+        height: 220px;
+    }
+}
